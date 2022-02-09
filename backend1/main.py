@@ -21,7 +21,7 @@ def task1(english_text):
     morse_text = ''
     for letter in english_text.upper():
         if letter != ' ':
-            morse_text += MORSE_CODE_DICT[letter] + ' '
+            morse_text += MORSE_CODE_DICT.get(letter, f"Oops, \"{letter}\" is not found") + ' '
         else:
             morse_text += ' '
     return morse_text
